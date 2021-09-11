@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Facts of stars, planets
+        </title>
+        <style>
+            body {
+                background-color: gold;
+                color: black;
+            }
+
+            .factsshot > a {
+                background-color: red;
+                padding: 8px;
+                margin: 250px;
+            }
+
+            section {
+                background-color: aqua;
+                padding: 8rem;
+                margin-top: 6rem;
+            }
+
+            td {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="factsShot">
+            <div class="factsshot">
+                <a class="buttonfact">
+                    Facts
+                </a>
+            </div>
+            <div class="facts">
+                <section>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a>
+                                        <p></p>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
