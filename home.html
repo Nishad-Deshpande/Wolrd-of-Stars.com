@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://solarsystem.pages.dev/assets/solar.44d1582b.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://solarsystem.pages.dev/assets/solar.44d1582b.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://solarsystem.pages.dev/assets/solar.44d1582b.svg">
+    <link rel="shortcut icon" type="image/png" sizes="192x192" href="https://solarsystem.pages.dev/assets/solar.44d1582b.svg">
+    <link rel="mask-icon" type="image/png" href="https://solarsystem.pages.dev/assets/solar.44d1582b.svg">
+    <head>
+        <title>
+            World of stars
+        </title>
+        <style>
+            body {font-family: Arial, Helvetica, sans-serif;
+                background-image: url('shutterstock-577527586.dll');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+        
+            .button1 {
+                background-color: rgb(0, 47, 255);
+                color: white;
+                height: 50px;
+                width: 95px;
+                border: 0px;
+                font-size: 17px;
+                transition-duration: 0.6s;
+                box-shadow: 8px;
+                margin-top: 400px;
+                cursor: pointer;
+            }
+        
+            .button1:hover {
+                background-color: rgb(63, 0, 90);
+                color: white;
+                border-radius: 27px;
+                border: 9px;
+                border-color: darkgray;
+            }
+        
+            .topnav {
+                overflow: hidden;
+                background-color: #ffffff;
+            }
+        
+            .topnav a {
+                float: left;
+                color: #000000;
+                text-align: center;
+                padding: 10px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                cursor: pointer;
+            }
+        
+            .topnav a:hover {
+                background-color: black;
+                color: white;
+            }
+             
+            .sidebar {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                background-color: green;
+                overflow-x: hidden;
+            }
+            
+            .sidebar a {
+                padding: 10px 10px 10px;
+                font-size: 25px;
+                color: #111;
+                display: block;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+        
+            .sidebar a:hover {
+                color: #FFFFFF;
+            }
+        
+            .sidebar .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+            }
+        
+            .openbtn {
+                font-size: 17px;
+                background-color: #ffffff;
+                color: #111;
+                padding: 0px 0px;
+                border: none;
+            }
+
+            .icon-topnav {
+                color: #000000;
+                background-color: #FFFFFF;
+                padding: 10px 16px;
+            }
+
+            .icon-topnav:hover {
+                background-color: rgb(61, 65, 62);
+                color: #000000;
+            }
+
+            .thumb-like {
+                color: black;
+            }
+
+            .thumb-like:focus {
+                color: white;
+            }
+
+            .openbtn:hover {
+                background-color: #000000;
+                color: #ffffff;
+            }
+                  
+            #main {
+                transition: margin-left .5s;    
+            }
+        
+            #closeForm {
+                background-color: #d6d4d4;
+                color: black;
+                border: 0px;
+                width: 17px;
+                height: 17px;
+            }
+
+            .feedback {
+                border: chocolate;
+                outline: none;
+                background-color: orangered;
+                color: white;
+                border-radius: 4px;
+                margin-left: 9px;
+                margin-top: 8px;
+                margin-right: 0px;
+                margin-bottom: 0px;
+                position: absolute;
+                visibility: visible;
+                negative: inherit;
+                widows: initial;
+                padding: 18px;
+                justify-items: center;
+            }
+
+            #textfeedback {
+                margin-left: 100px;
+                margin-top: 100px;
+                width: 1px;
+                height: 0px;
+            }
+
+            #textarea-feedback {
+                background-color: purple;
+                color: white;
+            }
+
+            #textarea-feedback:focus {
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            .closefeedback {
+                background-color: transparent;
+                color: #000;
+                outline: none;
+                border: none;
+                margin-bottom: 2px;
+                margin-left: 250px;
+                padding: 7px;
+            }
+
+            .closefeedback:focus {
+                border: black;
+            }
+
+            .send {
+                padding: 3 3px;
+                color: black;
+                background-color: orangered;
+            }
+
+            .sound-range {
+                background-color: darkgray;
+                color: black;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div id="sidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                ×
+            </a>
+            <a herf="tel:9970128903">
+                Contact us
+            </a>
+            <div onclick="myFeedBack()">
+                <a class="thumb-like">
+                    <p>
+                        Feedback
+                    </p>
+                </a>
+            </div>
+            <a class="thumb-dislike">
+                <i class="fa fa-thumbs-o-down">
+                </i>
+            </a>
+            <p>
+                Sound
+            </p>
+            <input type="range" class="sound-range">
+        </div>
+        <div class="topnav">
+            <a class="icon-topnav" href="file:///C:/Desktop/World%20of%20stars/World%20of%20Stars.html" aria-label="Home">
+                <i class="fa fa-fw fa-home">
+                </i>
+            </a>
+            <a class="icon-topnav" href="https://solarsystem.pages.dev/" aria-label="3D Page of Solar System">
+                <i class="fa fa-tv">
+                </i>
+            </a>
+            <a class="icon-topnav" href="file:///C:/Desktop/World%20of%20stars/World%20of%20stars%20Quiz.html" aria-label="Quize">
+                <i class="fa fa-question-circle">
+                </i>
+            </a>
+            <div id="main">
+                <a class="openbtn" onclick="openNav()" aria-label="Settings">
+                    <i class="fa fa-cog">
+                    </i>
+                </a>
+            </div>
+        </div>
+        <div id="textfeedback">
+        </div>
+        <div class="arialabel">
+            <p class="label">
+            </p>
+        </div>
+        <script>
+        function openNav() {
+            document.getElementById("sidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+        function myFeedBack() {
+            var feedBack = document.getElementById("textfeedback")
+            feedBack.innerHTML = `<div class="feedback"><div><button type="button" class="closefeedback" onclick="closeFeedBack()">x</button></div><input type="text" id="textarea-feedback" placeholder="Name"><br><br><textarea name="feedback" id="textarea-feedback" cols="30" rows="5" placeholder="Please give your Feedback to serve us better."></textarea><div class="send"><a><i class="fa fa-send"></i></a></div></div>`
+        }
+
+        function closeFeedBack() {
+            document.getElementById("textfeedback").style.width = "0";
+        }
+
+        </script>
+        <form method="GET" action="./World of stars Quiz.html">
+            <button type="submit" class="button button1">
+                    Get start
+            </button>
+        </form>
+    </body>
+</html>
