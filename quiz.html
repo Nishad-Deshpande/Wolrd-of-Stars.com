@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <base name="World of stars Quiz" href="quize.worldofstar.html">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://solarsystem.pages.dev/assets/solar.44d1582b.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://solarsystem.pages.dev/assets/solar.44d1582b.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://solarsystem.pages.dev/assets/solar.44d1582b.svg">
+    <link rel="shortcut icon" type="image/png" sizes="192x192" href="https://solarsystem.pages.dev/assets/solar.44d1582b.svg">
+    <link rel="mask-icon" type="image/png" href="https://solarsystem.pages.dev/assets/solar.44d1582b.svg">
+    <head>  
+        <title>
+            World of stars quiz
+        </title>
+        <style>
+            body{
+                background: linear-gradient(to right, #ffcc0000, #1eff00);
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+            section{
+                -webkit-box-shadow: 5px 5px 50px 8px rgba(0,0,0,0.59); 
+                box-shadow: 5px 5px 50px 8px rgba(0,0,0,0.59);
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width:  500px;
+                margin-top: 100px;
+                background-color: white;
+                padding:15px;
+                border: 1px solid #999;
+                border-radius: 16px;
+            }
+
+            .question{
+                text-align: center;
+                size: 18px;
+            }
+
+            #answer-box{
+                text-align: center;
+                transition-duration: 0.9s;
+            }
+
+            #answer-box > button:hover{
+                background-color: rgba(228, 5, 5);
+            }
+
+            #answer-box > a:hover{
+                background-color: rgba(228, 5, 5);
+            }
+
+            #answer-box > form > button:hover{
+                background-color: rgba(228, 5, 5);
+            }
+
+            #answer-box > button{
+                cursor: pointer;
+                font-size: 2rem;
+                border: 2px solid rgb(5, 5, 5);
+                outline: none;
+                background-color: rgba(101, 219, 5, 0.9); 
+                border-radius: 8px;
+            }
+
+            #answer-box > a{
+                cursor: pointer;
+                font-size: 2rem;
+                border: 2px solid rgb(5, 5, 5);
+                outline: none;
+                background-color: rgba(101, 219, 5, 0.9); 
+                border-radius: 8px;
+                
+            }
+
+            #answer-box > form > button{
+                cursor: pointer;
+                font-size: 2rem;
+                border: 2px solid rgb(5, 5, 5);
+                outline: none;
+                background-color: rgba(101, 219, 5, 0.9); 
+                border-radius: 8px;
+            }
+
+            #options > button:hover{
+                background-color: rgb(194, 228, 250);
+            }
+            
+            #options > button{
+                cursor: pointer;
+                font-size: 2rem;
+                border: 2px solid rgb(5, 5, 5);
+                outline: none;
+                background-color: rgba(87, 155, 245, 0.9); 
+                border-radius: 8px;
+                transition-duration: 4s;
+            }
+
+            .button1{
+                background-color: blueviolet;
+                color: cornsilk;
+                border: 0px;
+                height: 19px;
+                width: 180px;
+            }
+
+            .button1 :hover {
+                background-color: darkblue;
+                color: white;
+                border-radius: 5px;
+                height: 6px;
+                width: 3px;
+                border: 0px;
+            }
+
+            .button2 {
+                background-color: blueviolet;
+                color: cornsilk;
+                border: 0px;
+                height: 19px;
+                width: 77px;
+            }
+
+            .button2 :hover {
+                background-color: darkblue;
+                color: white;
+                border-radius: 5px;
+                height: 6px;
+                width: 3px;
+                border: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <div class="container"> 
+                <div class="question">
+                    <h1 id="question-text">
+                        Stars, Planet QUIZ
+                    </h1>
+                </div>
+                <div id="answer-box">
+                    <br>
+                    <button class="start-button" id="start" onclick="start()" value="START">
+                        START!
+                    </button>
+                    <br>
+                </div>
+            </div>
+        </section>  
+        <script>
+        var score = 0
+function start(){
+    document.body.style.background = "linear-gradient(to right, #ffcc0000, #1eff00)"
+    var question = document.getElementById("question-text")
+    var answer = document.querySelector("#answer-box")
+    answer.innerHTML = `<br><button class="start-button" id="1" onclick="rightOption()">"UY Scuti"</button><br>\n<br><button id="2" onclick="wrongOption()" value="START">"V354 Cephei"</button><br>\n<br><button id="3" onclick="wrongOption()" value="START">"VY Canis Majoris"</button><br>\n<br><button id="4" onclick="wrongOption()" value="START">"V838 Monocerotis"</button>\n<br><br><button id="next-button" id="next" onclick="next()">NEXT</button><br>`
+    question.innerHTML = "What is the biggest Star in the world?"
+}
+function next(){
+    document.body.style.background = "linear-gradient(to right, #ffcc0000, #37ffee)"
+    var question = document.getElementById("question-text")
+    var answer = document.querySelector("#answer-box")
+    question.innerHTML = "What is the biggest satellite of jupiter?"
+    answer.innerHTML = `<br><button id="1" onclick="wrongOption()">"lo"</button><br>\n<br><button id="2" onclick="rightOption()">"Ganymede"</button><br>\n<br><button id="3" onclick="wrongOption()">"Europa"</button><br>\n<br><button id="4" onclick="wrongOption()">"Galilean"</button>\n<br><br><button id="next-button" id="next" onclick="secondNext()">NEXT</button><br>`
+}
+function secondNext(){
+    document.body.style.background = "linear-gradient(to right, #ffcc0000, #ff00dd)"
+    var question = document.getElementById("question-text")
+    var answer = document.querySelector("#answer-box")
+    question.innerHTML = "How many Earth days take Neptune to revolve around the Sun?"
+    answer.innerHTML = `<br><button id="1" onclick="rightOption()">"60,190 Earth days"</button><br>\n<br><button id="2" onclick="wrongOption()">"98,765 Earth days"</button><br>\n<br><button id="3" onclick="wrongOption()">"70,875 Earth days"</button><br>\n<br><button id="4" onclick="wrongOption()">"59,583 Earth days"</button>\n<br><br><button id="next-button" id="next" onclick="thirdNext()">NEXT</button><br>`
+}
+function thirdNext(){
+    document.body.style.background = "linear-gradient(to right, #ffcc0000, #ffbf00)"
+    var question = document.getElementById("question-text")
+    var answer = document.querySelector("#answer-box")
+    question.innerHTML = "What is the number of Saturn in Solar System?"
+    answer.innerHTML = `<br><button id="1" onclick="wrongOption()">"8"</button><br>\n<br><button id="2" onclick="wrongOption()">"5"</button><br>\n<br><button id="3" onclick="rightOption()">"6"</button><br>\n<br><button id="4" onclick="wrongOption()">"7"</button>\n<br><br><button id="next-button" id="next" onclick="fourthNext()">NEXT</button><br>`
+}
+function fourthNext(){
+    document.body.style.background = "linear-gradient(to right, #ffcc0000, #ff0000)"
+    var question = document.getElementById("question-text")
+    var answer = document.querySelector("#answer-box")
+    question.innerHTML = "What is a diameter of the Sun?"
+    answer.innerHTML = `<br><button id="1" onclick="wrongOption()">"1.4927 million km"</button><br>\n<br><button id="2" onclick="rightOption()">"1.3927 million km"</button><br>\n<br><button id="3" onclick="wrongOption()">"1.9894 million km"</button><br>\n<br><button id="4" onclick="wrongOption()">"1.8977 million km"</button>\n<br><br><button id="next-button" id="next" onclick="end()">NEXT</button><br>`
+}
+function wrongOption(){
+    document.getElementById('1').disabled = true
+    document.getElementById('2').disabled = true
+    document.getElementById('3').disabled = true
+    document.getElementById('4').disabled = true
+    document.body.style.background = "rgba(228, 5, 5)"
+    var question = document.getElementById("question-text")
+    question.innerHTML = "<p id='choice'>YOU'RE WRONG &#10060;</p>"
+
+}
+function rightOption(){
+    document.getElementById('1').disabled = true
+    document.getElementById('2').disabled = true
+    document.getElementById('3').disabled = true
+    document.getElementById('4').disabled = true
+    document.body.style.background = "rgba(101, 219, 5, 0.9)"
+    var question = document.getElementById("question-text")
+    question.innerHTML = "<p id='choice'>YOU'RE RIGHT &#9989;</p>"
+    score ++
+}
+
+function end(){
+    var answer = document.querySelector("#answer-box")
+    answer.innerHTML =`<form method="GET" action="./World of Stars.html"><button type="submit" onclick="myfghusk971()">Go to Home</button></form><br><a href="https://solarsystem.pages.dev/"> Go to Solar System </a><br><br><button onclick="start()">Restart</button><br><br><button onclick="myAnswers()">Answers</button>`
+    if (score == 0) {
+        question.innerHTML = `<h4>Score [${score}/5]\nBad luck...!</h4>\n`
+        document.body.style.backgroundImage = "url('C:/Users/Nishad/Desktop/World%20of%20stars/shutterstock-577527586.dll')"
+    }
+    if (score == 1) {
+        question.innerHTML = `<h4>Score [${score}/5]\n Hard luck try again next time...!</h4>\n`
+        document.body.style.backgroundImage = "url('C:/Desktop/World%20of%20stars/shutterstock-577527586.dll')"
+    }
+    if (score == 2){
+        question.innerHTML = `<h4>Score [${score}/5]\nStudy more and Try again later...!</h4>\n`
+        document.body.style.background = "url('C:/Desktop/World%20of%20stars/shutterstock-577527586.dll')"
+    }
+    if (score == 3){
+        question.innerHTML = `<h4>Score [${score}/5]\n Well tryied. Better luck...!</h4>\n`
+        document.body.style.backgroundImage = "url('C:/Desktop/World%20of%20stars/shutterstock-577527586.dll')"
+    }
+    if (score == 4){
+        question.innerHTML = `<h4>Score [${score}/5]\n You've a good luck...!</h4>\n`
+        document.body.style.backgroundImage = "url('C:/Desktop/World%20of%20stars/shutterstock-577527586.dll')"
+    }
+    if(score == 5){
+        question.innerHTML = `<h4>Score [${score}/5]\nYou are a best quiz hacker...!</h4>\n`
+        document.body.style.backgroundImage = "url('C:/Desktop/World%20of%20stars/shutterstock-577527586.dll')"
+    }
+}
+function myfghusk971() {
+   alert("Go to world of stars hompage."); 
+}
+
+function myfghusk679() {
+    alert("Go to Solar System page")
+}
+
+function myAnswers(km) {
+    var question = document.getElementById("question-text")
+    var answer = document.querySelector("#answer-box")
+    question.innerHTML = `Answers`
+    answer.innerHTML = `<p>1) What is the biggest Star in the world?<br>(1) UY Scuti</p><p>2) What is the biggest satellite of jupiter?<br>(2) Ganymede </p><p>3) How many Earth days take Neptune to revolve around the Sun?<br>(1) 60,190 Earth days</p><p>4) What is the number of Saturn in Solar System?<br>(3) 6 </p><p>5)What is a diameter of the Sun?<br>(2) 1.3927 million km</p><button onclick="start()">Restart</button><br><br><button onclick="end()">Back</button>`
+}
+
+    </script>
+  </body>
+</html>
+<!--
+Answers
+1) What is the biggest Star in the world?
+(1(Right option)) UY Scuti (2)V838 Monocerotis
+
+2) What is the biggest satellite of jupiter?
+(1) lo (2(Right option)) Ganymede (3) Europa (4) Galilean
+
+3) How many Earth days take Neptune to revolve around the Sun?
+(1(Right option)) 60,190 Earth days (2) 98,765 Earth days (3) 70,875 Earth days (4) 59,583 Earth days
+
+4) What is the number of Saturn in Solar System?
+(1) 8 (2) 5 (3(Right option)) 6 (4) 7
+
+5)What is a diameter of the Sun?
+(1) 1.4927 million km (2(Right option)) 1.3927 million km (3) 1.9894 million km (4) 1.8977 million km
+-->
